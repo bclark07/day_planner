@@ -29,8 +29,8 @@ for (i = 8; i < 18; i++) {
 
   var input = $("<input>")
     .addClass("time-block")
-    .attr("id", "_" + i); //.addClass("form-control past");
-  //populate innerHTML with stored_activities[i-8];
+    .attr("id", "_" + i)
+    .val(stored_activities[i - 8]);
   var save = $("<button>")
     .text("Save")
     .addClass("SaveBtn")
