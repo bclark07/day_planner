@@ -1,6 +1,7 @@
 var today = new Date();
 
-//if localstorage.getItem("activity")statement, get items and populate the calendar
+//if localstorage.getItem("activity")statement, get items and populate the calendar? should create the array if JSON.parse returns null
+
 var stored_activities = JSON.parse(localStorage.getItem("activity")) || [
   "",
   "",
