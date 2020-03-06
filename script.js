@@ -1,19 +1,26 @@
 var today = new Date();
 
-//if localstorage.getItem("activity")statement, get items and populate the calendar? should create the array if JSON.parse returns null
+if (localStorage.getItem("activity")) {
+  var stored_activities = JSON.parse(localStorage.getItem("activity"));
+} else {
+  var stored_activities = ["", "", "", "", "", "", "", "", "", ""];
+}
+//statement, get items and populate the calendar? should create the array if JSON.parse returns null
 
-var stored_activities = JSON.parse(localStorage.getItem("activity")) || [
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
-];
+// var stored_activities = JSON.parse(localStorage.getItem("activity")) || [
+//   "",
+//   "",
+//   "",
+//   "",
+//   "",
+//   "",
+//   "",
+//   "",
+//   "",
+//   ""
+// ];
+
+console.log(stored_activities);
 
 function initialize_page() {
   //sets date at top of page
